@@ -7,6 +7,12 @@ int printArray(int *A, int k)
         printf("%d ", A[i]);
     }
 }
+void swap(int* a,int* b){
+    int temp;
+    temp = *a ;
+    *a=*b;
+    *b=temp;
+}
 
 int partition(int *A, int low, int high)
 {
@@ -31,9 +37,7 @@ int partition(int *A, int low, int high)
             A[j] = temp;
         }
     } while (i < j);
-    temp = A[low];
-    A[low] = A[j];
-    A[j] = temp;
+    swap(&A[low],&A[j]);
     return j;
 }
 void quickSort(int *A, int low, int high)

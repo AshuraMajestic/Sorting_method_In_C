@@ -7,10 +7,10 @@ int printArray( int* A, int k){
 }
 void insertionSort(int* A, int k){
 int n,j;
-for(int i=1;i<=k-1;i++){ //number of passes
+for(int i=1;i<k;i++){ //number of passes
 
-n=A[i];
-j=i-1;
+n=A[i];  //Unsorted Array First element
+j=i-1;   // Sorted Array LAst Index
 while(j>=0 && A[j]>n){
     A[j+1]=A[j];
     j--;

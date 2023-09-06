@@ -5,14 +5,20 @@ int printArray( int* A, int k){
         printf("%d ",A[i]);
     }
 }
+
+void swap(int* a,int* b){
+    int temp;
+    temp = *a ;
+    *a=*b;
+    *b=temp;
+}
+
 void bubbleSort(int* A, int k){
     int temp;
     for(int i=0;i<k-1;i++){
         for(int j=0;j<k-1-i;j++){
             if(A[j]>A[j+1]){
-                temp=A[j];
-                A[j]=A[j+1];
-                A[j+1]=temp;
+                swap(&A[j],&A[j+1]);
             }
         }
     }
