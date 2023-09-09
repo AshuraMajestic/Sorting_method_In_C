@@ -57,7 +57,7 @@ void radixSort(int *A, int n)
 
 int main()
 {
-    //Repeated number cannot be sorted using this function without using some brain
+    // Repeated number cannot be sorted using this function without using some brain
     int A[30];
     int k;
     printf("Enter the size of array:");

@@ -22,21 +22,25 @@ int maximum(int *A, int k)
 }
 void countSort(int *A, int k)
 {
-    int i,j;
+    int i, j;
     int max = maximum(A, k);
-    int *count = (int *)calloc(max+1,sizeof(int));
-    for(i=0;i<k;i++){
+    int *count = (int *)calloc(max + 1, sizeof(int));
+    for (i = 0; i < k; i++)
+    {
         count[A[i]]++;
     }
-    i=0;
-    j=0;
-    while(i<=max){
-        if(count[i]>0){
-            A[j]=i;
+    i = 0;
+    j = 0;
+    while (i <= max)
+    {
+        if (count[i] > 0)
+        {
+            A[j] = i;
             count[i]--;
             j++;
         }
-        else{
+        else
+        {
             i++;
         }
     }
