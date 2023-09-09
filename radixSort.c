@@ -58,18 +58,16 @@ void radixSort(int *A, int n)
 int main()
 {
     //Repeated number cannot be sorted using this function without using some brain
-    int A[30] = {2, 65, 100, 2, 23};
-
-
-    int k = 5;
-    // printf("Enter the size of array:");
-    // scanf("%d", &k);
-    // printf("\n\nEnter the elemensts of array:");
-    // for (int i = 0; i < k; i++)
-    // {
-    //     printf("\n[%d]:", i + 1);
-    //     scanf("%d", &A[i]);
-    // }
+    int A[30];
+    int k;
+    printf("Enter the size of array:");
+    scanf("%d", &k);
+    printf("\n\nEnter the elemensts of array:");
+    for (int i = 0; i < k; i++)
+    {
+        printf("\n[%d]:", i + 1);
+        scanf("%d", &A[i]);
+    }
     printf("\nArray before sorting:");
     printArray(A, k);
     radixSort(A, k);
