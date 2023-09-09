@@ -1,7 +1,6 @@
 // Decimal Number sorting
 
-#include <stdio.h>
-
+#include<stdio.h>
 int printArray(int *A, int k)
 {
     for (int i = 0; i < k; i++)
@@ -12,6 +11,7 @@ int printArray(int *A, int k)
 
 void bucketSort(int *A, int n)
 {
+    
 }
 
 int main()
