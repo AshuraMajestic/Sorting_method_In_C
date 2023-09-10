@@ -9,18 +9,18 @@ int printArray(int *A, int k)
 }
 void insertionSort(int *A, int k)
 {
-  int n, j;
+  int key, j;
   for (int i = 1; i < k; i++)
   { // number of passes
 
-    n = A[i];  // Unsorted Array First element
+    key = A[i];  // Unsorted Array First element
     j = i - 1; // Sorted Array LAst Index
-    while (j >= 0 && A[j] > n)
+    while (j >= 0 && A[j] > key)
     {
       A[j + 1] = A[j];
       j--;
     }
-    A[j + 1] = n;
+    A[j + 1] = key;
   }
 }
 

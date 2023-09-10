@@ -1,6 +1,8 @@
+//Variation of Selection sort
 // Used when duplicate elements are more
+
 #include <stdio.h>
-int printArray(int *A, int k)
+int printArray(int *A, int start, int k)
 {
     for (int i = 0; i < k; i++)
     {
@@ -56,18 +58,19 @@ void bingoSort(int *A, int n)
                 swap(&A[i], &A[nextPos]);
                 nextPos++;
             }
-            else if(A[i]<nextBingo){
+            else if (A[i] < nextBingo)
+            {
                 nextBingo = A[i];
             }
         }
-        bingo=nextBingo;
-        nextBingo=largestElement;
+        bingo = nextBingo;
+        nextBingo = largestElement;
     }
 }
 
 int main()
 {
-    int A[30] ;
+    int A[30];
     int k;
     printf("Enter the size of array:");
     scanf("%d", &k);
@@ -78,11 +81,11 @@ int main()
         scanf("%d", &A[i]);
     }
     printf("\nArray before sorting:");
-    printArray(A, k);
+    printArray(A, 0, k);
 
     bingoSort(A, k);
 
     printf("\n\nArray after sorting:");
-    printArray(A, k);
+    printArray(A, 0, k);
     return 0;
 }
