@@ -2,6 +2,7 @@
 // Used when duplicate elements are more
 
 #include <stdio.h>
+
 int printArray(int *A, int start, int k)
 {
     for (int i = 0; i < k; i++)
@@ -35,6 +36,7 @@ int min(int *A, int n)
     }
     return min;
 }
+
 void swap(int *a, int *b)
 {
     int temp = *a;
